@@ -1,7 +1,17 @@
 package farmix.com.entity;
 
+import lombok.Getter;
+
+@Getter
 public enum USER_ROLE {
-    ROLE_ADMIN,
-    ROLE_INSTRUCTOR,
-    ROLE_STUDENT
+    ADMIN("ROLE_ADMIN"),
+    INSTRUCTOR("ROLE_INSTRUCTOR"),
+    STUDENT("ROLE_STUDENT");
+
+    private final String authority;
+
+    USER_ROLE(String authority) {
+        this.authority = authority;
+    }
+
 }
